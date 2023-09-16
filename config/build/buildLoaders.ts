@@ -4,6 +4,12 @@ import { BuildOptions } from './types/config';
 
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 // тип для правил и лоадеров
+
+const svgLoader = {
+        test: /\.svg$/i,
+        use: ['@svgr/webpack'],
+}
+
 const cssLoader =  {
     test: /\.s[ac]ss$/i,
     use: [
@@ -21,14 +27,26 @@ const cssLoader =  {
     ],
   }
 
+// Если не используем тайпскрипт - нужен babel-loader
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
     }
 
+    const fileLoader = {
+      test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+      use: [
+        {
+        loader: 'file-loader',
+        },
+      ],
+    }
+
     return [
-          typescriptLoader,
-          cssLoader,
+        fileLoader,
+        svgLoader,
+        typescriptLoader,
+        cssLoader,
       ]
 }
