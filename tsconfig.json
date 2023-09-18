@@ -37,6 +37,7 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
+    "strictNullChecks": true
   },
   "ts-node": {
     "compilerOptions": {
