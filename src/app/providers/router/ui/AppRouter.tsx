@@ -4,7 +4,7 @@ import { RouteConfig } from 'shared/config/routeConfig/routeConfig';
 
 const AppRouter = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>{t('Загрузка')}</div>}>
       <Routes>
         {/* нам нужен массив значений, воспользуемся функцией, таким образом
         мы получим только нужные значения которые будем передавать как

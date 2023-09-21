@@ -5,7 +5,8 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
-        'standard-with-typescript'
+        'standard-with-typescript',
+        'plugin:i18next/recommended'
     ],
     overrides: [
         {
@@ -56,7 +57,8 @@ module.exports = {
         '@typescript-eslint/strict-boolean-expressions': 'off',
         '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/ban-ts-comment': 'off',
-        '@typescript-eslint/naming-convention': 'off'
+        '@typescript-eslint/naming-convention': 'off',
+        'i18next/no-literal-string': ['error', {markupOnly: true}]
     },
     globals: {
         '__IS_DEV__': true
