@@ -16,4 +16,5 @@
             "[scss]": {
                 "editor.defaultFormatter": "stylelint.vscode-stylelint"
                 },
+                "i18n-ally.sourceLanguage": "en",
 }
