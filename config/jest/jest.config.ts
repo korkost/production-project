@@ -5,25 +5,25 @@
 
 export default {
   clearMocks: true,
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
   coveragePathIgnorePatterns: [
-    "\\\\node_modules\\\\"
+    '\\\\node_modules\\\\'
   ],
   moduleDirectories: [
-    "node_modules"
+    'node_modules'
   ],
   moduleFileExtensions: [
-    "js",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
+    'js',
+    'jsx',
+    'ts',
+    'tsx',
+    'json',
+    'node'
   ],
   rootDir: '../../',
   testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-  ],
+    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
+  ]
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -130,7 +130,6 @@ export default {
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
-
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},

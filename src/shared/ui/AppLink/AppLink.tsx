@@ -26,7 +26,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
     <Link
       to={to}
       // [[]]через динамическое свойство передали тему
-      className={classNames(cls.Applink, {}, [className, cls[theme]])}
+      className={classNames(cls.Applink, {}, [className ?? '', cls[theme]])}
       {...otherProps}
     >
       {children}
