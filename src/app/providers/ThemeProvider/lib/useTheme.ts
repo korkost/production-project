@@ -9,9 +9,9 @@ interface UseThemeResult {
 export function useTheme(): UseThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
 
-        if (theme === undefined) {
-        // Можно выполнить какие-либо дополнительные действия при неопределенном значении theme, если это необходимо.
-        // Например, можно установить значение по умолчанию.
+    if (theme === undefined) {
+    // Можно выполнить какие-либо дополнительные действия при неопределенном значении theme, если это необходимо.
+    // Например, можно установить значение по умолчанию.
         return {
             theme: Theme.LIGHT, // Значение по умолчанию
             toggleTheme: () => {}, // Пустая функция, если theme не определено
