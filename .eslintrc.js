@@ -36,7 +36,12 @@ module.exports = {
         "no-shadow": "off",
         "import/extensions": "off",
         "import/no-extraneous-dependencies": "off",
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        'i18next/no-literal-string': ['error', 
+        { 
+            markupOnly: true, 
+            ignoreAttribute: ['data-testid', 'to'] 
+        }]
     },
     "root": true,
     globals: {
@@ -46,5 +51,14 @@ module.exports = {
         react: {
             version: 'detect'
         }
-    }
+    },
+    // для определенного типа файлов переопределить правила
+    overriders: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            }
+        }
+    ]
 }
